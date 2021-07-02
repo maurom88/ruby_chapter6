@@ -1,6 +1,8 @@
 It's Truncated!
+ --I'm the author of this comment about Truncated!
 No, it isn't
+ --I wrote it :)
 Truncated or not?
-No, it's not
-I think it is
+ --This will be excluded from Trucated's results!
 No, it's not Truncated!
+ --I don't want to see this, nor Truncated
