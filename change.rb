@@ -1,4 +1,9 @@
-amount_owed = 5.30
+amount_owed = 0.00
+
+while amount_owed == 0
+    print "Enter a number: "
+    amount_owed = gets.chomp.to_f
+end
 
 change_owed = amount_owed * 100
 
