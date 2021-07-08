@@ -5,7 +5,7 @@ while input_ok == false
     print "Enter a number: "
     amount_input = gets.chomp.to_s
 
-    if amount_input.to_i > 0
+    if amount_input.to_i >= 0
         amount_owed_dollars = amount_input.to_i
 
         if !amount_input.split('.')[1] || amount_input.split('.')[1].length != 2
@@ -32,7 +32,7 @@ def count_change
     coins_owed[:dimes] = yield coins_available[:dime]
     coins_owed[:nickels] = yield coins_available[:nickel]
 
-    puts coins_owed
+    puts "You need to dispense #{coins_owed}"
 end
 
 count_change do |coins_available|
