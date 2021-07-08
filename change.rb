@@ -32,7 +32,36 @@ def count_change
     coins_owed[:dimes] = yield coins_available[:dime]
     coins_owed[:nickels] = yield coins_available[:nickel]
 
-    puts "You need to dispense #{coins_owed}"
+    print "You need to dispense "
+    if coins_owed[:toonies] == 1
+        print "#{coins_owed[:toonies]} toonie"
+    elsif coins_owed[:toonies] > 1
+        print "#{coins_owed[:toonies]} toonies"
+    end
+
+    if coins_owed[:loonies] == 1
+        print "#{coins_owed[:loonies]} loonie"
+    elsif coins_owed[:loonies] > 1
+        print "#{coins_owed[:loonies]} loonies"
+    end
+
+    if coins_owed[:quarters] == 1
+        print "#{coins_owed[:quarters]} quarter"
+    elsif coins_owed[:quarters] > 1
+        print "#{coins_owed[:quarters]} quarters"
+    end
+
+    if coins_owed[:dimes] == 1
+        print "#{coins_owed[:dimes]} dime"
+    elsif coins_owed[:dimes] > 1
+        print "#{coins_owed[:dimes]} dimes"
+    end
+
+    if coins_owed[:nickels] == 1
+        print "#{coins_owed[:nickels]} nickel"
+    elsif coins_owed[:nickels] > 1
+        print "#{coins_owed[:nickels]} nickels"
+    end
 end
 
 count_change do |coins_available|
