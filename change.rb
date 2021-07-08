@@ -1,8 +1,23 @@
 amount_owed = 0.00
+input_ok = false
 
-while amount_owed == 0
+while input_ok == false
     print "Enter a number: "
-    amount_owed = gets.chomp.to_f
+    amount_input = gets.chomp.to_s
+
+    if amount_input.to_i > 0
+        amount_owed_dollars = amount_input.to_i
+
+        if !amount_input.split('.')[1] || amount_input.split('.')[1].length != 2
+            input_ok = false
+        else
+            amount_owed_cents = amount_input.split('.')[1].to_f
+            amount_owed = (amount_owed_dollars + (amount_owed_cents / 100)).round(2)
+            input_ok = true
+        end
+    else
+        input_ok = false
+    end
 end
 
 change_owed = amount_owed * 100
