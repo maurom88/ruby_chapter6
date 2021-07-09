@@ -32,35 +32,35 @@ def count_change
     coins_owed[:dimes] = yield coins_available[:dime]
     coins_owed[:nickels] = yield coins_available[:nickel]
 
-    print "You need to dispense "
+    puts "You need to dispense:"
     if coins_owed[:toonies] == 1
-        print "#{coins_owed[:toonies]} toonie"
+        puts "#{coins_owed[:toonies]} toonie"
     elsif coins_owed[:toonies] > 1
-        print "#{coins_owed[:toonies]} toonies"
+        puts "#{coins_owed[:toonies]} toonies"
     end
 
     if coins_owed[:loonies] == 1
-        print "#{coins_owed[:loonies]} loonie"
+        puts "#{coins_owed[:loonies]} loonie"
     elsif coins_owed[:loonies] > 1
-        print "#{coins_owed[:loonies]} loonies"
+        puts "#{coins_owed[:loonies]} loonies"
     end
 
     if coins_owed[:quarters] == 1
-        print "#{coins_owed[:quarters]} quarter"
+        puts "#{coins_owed[:quarters]} quarter"
     elsif coins_owed[:quarters] > 1
-        print "#{coins_owed[:quarters]} quarters"
+        puts "#{coins_owed[:quarters]} quarters"
     end
 
     if coins_owed[:dimes] == 1
-        print "#{coins_owed[:dimes]} dime"
+        puts "#{coins_owed[:dimes]} dime"
     elsif coins_owed[:dimes] > 1
-        print "#{coins_owed[:dimes]} dimes"
+        puts "#{coins_owed[:dimes]} dimes"
     end
 
     if coins_owed[:nickels] == 1
-        print "#{coins_owed[:nickels]} nickel"
+        puts "#{coins_owed[:nickels]} nickel"
     elsif coins_owed[:nickels] > 1
-        print "#{coins_owed[:nickels]} nickels"
+        puts "#{coins_owed[:nickels]} nickels"
     end
 end
 
